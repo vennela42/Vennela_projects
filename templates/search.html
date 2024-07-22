@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add posts</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<style>
+    input[type="file"] {
+            display: block;
+            margin-bottom: 10px;
+        }
+</style>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li>
+            
+            <li><a href="{{ url_for('add_post') }}">Add Post</a></li>
+            <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        
+        <h2>Search a blog</h2>
+        <form action="{{ url_for('search_post') }}" method="GET">
+            <label for="title">post Title:</label>
+            <input type="text" id="title" name="title" required>
+            <button type="submit">Search</button>
+        </form>
+    
+        {% if flag != 'T' %}
+       {% if data %}
+       <div>
+        <h2>Search Results:</h2>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>post Title</th>
+                    <th>content</th>
+                    <th>edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{row[2]}}</td>
+                    <td>{{row[3]}}</td>
+                    
+                    <td>
+                        <form action="{{ url_for('edit', blog_id=row[0]) }}" method="POST">
+                            <button type="submit" class="delete-link">edit</button>
+                            
+                        </form>
+                        </td>
+                        <td>
+                        <form action="{{ url_for('delete_pot', blog_id=row[0]) }}" method="POST">
+                            <button type="submit" class="delete-link" onclick="confirmDelete(event)">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {%endfor%}
+                
+            </tbody>
+        </table>
+        {% else %}
+        <h2>No results found</h2>
+        {% endif %}
+        {% endif %}
+    </div>
+    </div> 
+</body>
+
+</html>
