@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>hospital</title>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body>
+        <header>
+            <p>contact us +91 0123456789 | suh@hospitalgmail.com</p>
+        </header>
+        <nav>
+            <p class="logo"><span>super</span> hospital</p>
+            <div class="links">
+                <a href="{{ url_for('index') }}">HOME</a>
+                <a href="{{ url_for('about') }}">ABOUT US</a>
+                <a href="{{ url_for('service') }}">SERVICE</a>
+                <a href="{{ url_for('doctors') }}">DOCTORS</a>
+                <a href="{{ url_for('contact') }}">CONTACT US</a>
+                <a href="{{url_for('dashboard')}}">Dashboard</a>
+            </div>
+        </nav>
+        <hr>
+        <div class="boxed">
+            <p>...........</p>
+            <br>
+            <p><h2 class="doc">information Not available</h2></p>
+        </div>
+        <footer>
+            <p>&copy; super hospital, prasanthinilayam puttaparthi</p>
+        </footer>
+    </body>
+</html>

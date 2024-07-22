@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hospital</title>
+     <link rel="stylesheet" href="../static/style.css"> 
+</head>
+<body>
+    <header>
+        <p>contact us +91 0123456789 | suh@hospitalgmail.com</p>
+    </header>
+    <nav>
+        <p class="logo"><span>super</span> hospital</p>
+        <div class="links">
+            <a href="{{ url_for('index') }}">HOME</a>
+            <a href="{{ url_for('about') }}">ABOUT US</a>
+            <a href="{{ url_for('service') }}">SERVICE</a>
+            <a href="{{ url_for('doctors') }}">DOCTORS</a>
+            <a href="{{ url_for('contact') }}">CONTACT US</a>
+            <a href="{{url_for('dashboard')}}">Dashboard</a>
+        </div>
+    </nav>
+    <hr>
+<div class="boxed">
+    
+    <h3>welcome to <span id="sp">super hospital</span></h3>
+
+<div class="box">
+<p><h2>Best medicine & healthcare needs to our patients</h2></p>
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem ullam quasi eum maiores, voluptatem voluptatibus facilis, voluptas cupiditate iste tenetur illum iure explicabo delectus deleniti consectetur perspiciatis, porro obcaecati non?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed doloremque, placeat officiis autem laboriosam natus eum, fuga commodi excepturi ducimus ullam ea omnis esse odio nisi. Dolorem voluptates amet cupiditate.</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id amet dolorum iusto, quidem recusandae tempore iure impedit numquam ad quas. Incidunt obcaecati pariatur molestias odio dolore eius, assumenda aliquid natus!</p>
+</div>
+<div class="box">
+    <img class="img" src="../static/about.jpg">
+</div>
+</div>
+<hr>
+<div class="box1">
+<p>Address</p><br>
+<h3>super hospital & research center</h3>
+<p>
+    #180,prasanthi nilayam<br>
+    mainroad,puttaparthi,<br>
+    satya sai dictrict.
+</p>
+</div>
+<footer>
+    <p>&copy; super hospital, prasanthinilayam puttaparthi</p>
+</footer>
+
+</body>
+</html>

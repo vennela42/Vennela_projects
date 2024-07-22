@@ -1,0 +1,280 @@
+* {
+    padding: 0 auto;
+    margin: 0 auto;
+    text-transform: capitalize;
+ }
+ 
+ header {
+    background-color: #2FA5EB;
+ }
+ 
+ header p {
+    padding: 10px;
+    text-align: center;
+    margin-left: 800px;
+    color: white;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 40px;
+ 
+ }
+ 
+ nav {
+    padding: 5px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 40px;
+ }
+ 
+ p span {
+    color: #2fa5eb;
+    font-family: forte;
+ }
+ 
+ nav p {
+    font-family: forte;
+    font-size: 40px;
+    display: inline;
+    font-style: italic;
+    margin-left: 130px;
+ 
+    
+ }
+ 
+ .links {
+    display: inline;
+    margin-left: 200px;
+ 
+ }
+ 
+ .links a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: grey;
+ 
+ }
+ 
+ a:hover {
+ 
+    color: #2FA5EB;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: underline;
+    padding-bottom: 4px;
+ }
+ 
+ .bac {
+    background-image: url(../static/a.jpg);
+    background-repeat: repeat;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    border-bottom: 2px solid #f0f0f0;
+ }
+ 
+ .opa {
+    margin-left: 100px;
+    background-color: black;
+    width: 75%;
+    height: 300px;
+    opacity: 0.4;
+ }
+ 
+ .p1 {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 140px;
+ }
+ 
+ .p2 {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 10px;
+ }
+ .cont {
+    width:100%;
+    color: grey;
+ border-bottom: 2px solid #f0f0f0;
+ }
+ 
+ .cont1 {
+    width:80%;
+    
+ }
+ 
+ h3,
+ h4 {
+    color: black;
+ }
+ 
+ .li {
+    margin-left: 40px;
+ }
+ 
+ h1 {
+    text-align: center;
+ }
+ 
+ .sty {
+    font-family: forte;
+ 
+ }
+ 
+ table {
+    margin-left:200px;
+    width:60
+ 
+ }
+ 
+ input {
+    padding: 10px 37px;
+    border: 1px solid black;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    
+ }
+ select {
+   
+    border: 1px solid black;
+    padding: 10px 37px;
+    width: 250px;
+    height: 40px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+ 
+ }
+ 
+ #sub {
+    padding: 6px 205px;
+    background-color: #2FA5EB;
+    width: 500px;
+    height: 40px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+ 
+ }
+ .textarea{
+    width: 300px;
+    height: 40px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+ 
+ }
+ 
+ #sub:hover {
+    background-color: darkolivegreen;
+    color: white;
+ }
+ 
+ footer {
+    background-color: #2FA5EB;
+    text-align: center;
+    color: white;
+ }
+ 
+ footer p {
+    padding: 8px;
+    background-color: black;
+    width: 80%;
+    text-align: left;
+    margin-left: 80px;
+ }
+ 
+ .boxed {
+    margin-left: 130px;
+    width: 100%;
+    padding: 30px;
+    line-height: 18px;
+ }
+ 
+ .box {
+    display: inline-block;
+    width:600px;
+ }
+ 
+ .img {
+    height: 200px;
+    margin-left: 40px;
+ }
+ 
+ .box1 {
+    margin-left: 170px;
+    line-height: 25px;
+ 
+ }
+ 
+ #sp {
+    background-color: yellow;
+ }
+ .serv{
+   width: 100%;
+   margin:0 auto;
+   margin-left: 130px;
+ }
+ .serimg{
+    width: 250px;
+ }
+ .ser{
+    display: inline-block;
+    width: 30%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+ }
+ .contact{
+    
+       margin-left: 130px;
+       width: 100%;
+       padding: 30px;
+       line-height: 30px;
+ }
+ table {
+   width: 80%;
+   border-collapse: collapse;
+   margin-top:50pxpx;
+}
+th, td {
+   border: 1px solid #ccc;
+   padding: 10px;
+   text-align: center;
+   background-color: cornflowerblue;
+
+}
+th {
+   background-color: #f9f9f9;
+}
+td {
+   background-color: #fff;
+}
+td a {
+   color:rosybrown;
+   text-decoration: none;
+}
+td a:hover {
+   text-decoration: underline;
+}
+thead {
+   background-color: #f2f2f2;
+}
+tbody tr:nth-child(even) {
+   background-color: #f9f9f9;
+}
+tbody tr:hover {
+   background-color: #f1f1f1;
+}
+.btn {
+   background-color:darkorchid;
+   color: white;
+   padding: 10px 20px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   margin: 10px 0;
+   cursor: pointer;
+   border-radius: 5px;
+}
+.btn:hover {
+   background-color: #45a049;
+}

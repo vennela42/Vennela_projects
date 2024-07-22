@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../static/style.css">
+
+</head>
+<body>
+    
+    <nav>
+        <p class="logo"><span>super</span> hospital</p>
+        <div class="links">
+            <a href="{{ url_for('index') }}">HOME</a>
+            <a href="{{ url_for('about') }}">ABOUT US</a>
+            <a href="{{ url_for('service') }}">SERVICE</a>
+            <a href="{{ url_for('doctors') }}">DOCTORS</a>
+            <a href="{{ url_for('contact') }}">CONTACT US</a>
+            <a href="{{url_for('dashboard')}}">Dashboard</a>
+        </div>
+    </nav>
+
+    <div align="center">
+        <div align="center" class="border">
+            <div class="header">
+                <!-- <h1 class="word">Dashboard</h1> -->
+            </div>
+            
+            <div class="msg">{{ msg }}</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>firstname</th>
+                        <th>lastname</th>
+                        <th>email</th>
+                        <th>mobile</th>
+                        <th>sex</th>
+                        <th>appointment_date</th>
+                        <th>message</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in data %}   
+                    <tr>
+                        <td>{{ i[0] }}</td> <!-- Assuming story[0] is the User ID -->
+                        <td>{{ i[1] }}</td> <!-- Assuming story[1] is the Story ID -->
+                        <td>{{ i[2] }}</td> <!-- Assuming story[2] is the Title -->
+                       <td>{{ i[3] }}</td> <!-- Assuming story[3] is the Story -->
+                       <td>{{ i[4] }}</td> 
+                       <td>{{ i[5] }}</td> 
+                       <td>{{ i[6] }}</td> 
+                       <td>{{ i[7] }}</td> 
+                       
+                        <td><a href="{{ url_for('update', id=i[0]) }}">Edit</a></td> 
+                        <td><a href="{{ url_for('delete', id=i[0]) }}">Delete</a></td>
+                    </tr>
+                    {% endfor %} 
+                </tbody>
+            </table> 
+            
+                
+        </div>
+    </div>
+</body>
+</html>

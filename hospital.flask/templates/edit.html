@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hospital</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <p>contact us +91 0123456789 | suh@hospitalgmail.com</p>
+    </header>
+    <nav>
+        <p class="logo"><span>super</span> hospital</p>
+        <div class="links">
+            <a href="{{ url_for('index') }}">HOME</a>
+            <a href="{{ url_for('about') }}">ABOUT US</a>
+            <a href="{{ url_for('service') }}">SERVICE</a>
+            <a href="{{ url_for('doctors') }}">DOCTORS</a>
+            <a href="{{ url_for('contact') }}">CONTACT US</a>
+            <a href="{{url_for('dashboard')}}">Dashboard</a>
+        </div>
+    </nav>
+    <hr>
+    <div class="bac">
+        <div class="opa">
+            <p class="p1">health care services</p>
+            <p class="p2">we care for your health</p>
+        </div>
+    </div>
+    <div class="cont">
+        <div class="cont1">
+            <h4 class="black">we are medical care</h4><br>
+            <h3 class="black">we have medicare options for you !</h3><br><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita provident libero <br>incidunt unde odit
+                tempora excepturi animi laudantium blanditiis soluta veritatis<br> ipsum est quidem,labore optio ducimus
+                cumque perspiciatis necessitatibus!</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit nihil, eligendi deleniti ipsa <br>delectus
+                labore ab quasi natus excepturi dicta incidunt,<br> magni amet ipsum fuga eos tempore consectetur, ratione
+                in?</p><br>
+            <div class="li">
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Expedita provident libero incidunt unde odit tempora excepturi</li>
+                    <li>Animi laudantium blanditiis soluta veritatis ipsum est quidem,</li>
+                    <li>Labore optio ducimus cumque perspiciatis necessitatibus!</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <h1 class="sty">Make an appointment</h1><br><br>
+    <div class="msg">{{ data }}</div>
+    <form action="{{url_for('update',id=data[0])}}" method="post">
+        <table>
+            <tr>
+                <td class="inp">
+                    <input ype="hidden" name="id" value="data[0]">
+
+                </td>
+                <td class="inp">
+                    <label for="firstname">firstname</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="firstname" required value="{{ data[1]}}">
+                    <label for="lastname">lastname</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="lastname"  required value="{{ data[2]}}">
+                </td>
+            </tr>
+            <tr>
+                <td class="inp">
+                    <label for="email">email</label>
+                    <input type="email" id="email" name="email" placeholder="emailid"  required value="{{ data[3]}}">
+                    <label for="mobile">Mobile</label>
+                    <input type="text" name="mobile" placeholder="mobile number" required value="{{ data[4]}}">
+                </td>
+            </tr>
+            <tr>
+                <td class="inp">
+                    <label for="sex">sex</label>
+                    <select name="sex" id="sex"  required value="{{ data[5]}}">
+                        <option value="M">--sex--</option>
+                        <option value="F">Female</option>
+                        <option value="M">Male</option>
+                    </select>
+                    <label for="appointment_date">Date</label>
+                    <input type="text" id="appointment_date" name="appointment_date" placeholder="Appointment date"  required value="{{ data[6]}}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="message">message</label>
+                    <textarea name="message" id="message" cols="70" rows="8"  required value="{{ data[7]}}"></textarea>
+                </td>
+            </tr><b>
+                <tr>
+                </tr>
+        </table><br>
+        <table>
+            <td>
+                <input id="sub" type="submit" name="submit" value="submit"  required value="{{ data[7]}}">
+            </td>
+        </table>
+    </form>
+   
+    <footer>
+        <p>&copy; super hospital, prasanthinilayam puttaparthi</p>
+    </footer>
+</body>
+</html>
